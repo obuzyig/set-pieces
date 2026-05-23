@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-panel: var(--panel);
+  --color-panel-strong: var(--panel-strong);
+  --color-line: var(--line);
+  --color-accent: #0f8b8d;
+  --color-accent-2: #c2410c;
+  --color-button: var(--button);
+  --color-bg: var(--bg);
+  --color-pitch: #356f3c;
+}
+
+@layer base {
+  :root {
+    --ink: #18212f;
+    --muted: #667085;
+    --panel: #f7f2e8;
+    --panel-strong: #efe4d1;
+    --line: rgba(24, 33, 47, 0.1);
+    --button: #202a3a;
+    --bg: #d7dfd5;
+  }
+
+  .dark {
+    --ink: #f1f5f9;
+    --muted: #cbd5e1;
+    --panel: #0f172a;
+    --panel-strong: #020617;
+    --line: rgba(255, 255, 255, 0.15);
+    --button: #1e293b;
+    --bg: #020617;
+  }
+
+  body {
+    @apply bg-bg text-ink transition-colors duration-300;
+    font-family: var(--font-sans);
+  }
+}
